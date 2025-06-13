@@ -1,6 +1,6 @@
 {
   "name": "@uxndigital/postcss-config",
-  "description": "",
+  "description": "postcss config for UXN Digital",
   "version": "8.0.0",
   "author": "UXN Digital",
   "devDependencies": {
@@ -8,7 +8,7 @@
     "postcss-preset-env": "latest",
     "postcss-utopia": "^1.1.0",
     "postcss-flexbugs-fixes": "latest",
-    "postcss": "^8.4.49"
+    "postcss": "8.X.X"
   },
   "files": [
     "public.js",

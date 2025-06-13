@@ -25,6 +25,7 @@
   },
   "repository": "uxndigital/postcss-config",
   "publishConfig": {
+    "access": "public",
     "tag": "v8"
   }
 }

@@ -3,25 +3,36 @@
   "description": "postcss config for UXN Digital",
   "version": "8.0.0",
   "author": "UXN Digital",
+  "scripts": {
+    "build": "tsc"
+  },
   "devDependencies": {
+    "@types/postcss-load-config": "^3.0.1",
+    "postcss": "8.X.X",
+    "postcss-flexbugs-fixes": "latest",
     "postcss-jit-props": "^1.0.14",
     "postcss-preset-env": "latest",
     "postcss-utopia": "^1.1.0",
-    "postcss-flexbugs-fixes": "latest",
-    "postcss": "8.X.X"
+    "typescript": "^5.8.3"
   },
-  "files": [
-    "public.js",
-    "internal.js"
-  ],
+  "exports": {
+    ".": {
+      "types": "./public.d.ts",
+      "default": "./public.js"
+    },
+    "./internal": {
+      "types": "./internal.d.ts",
+      "default": "./internal.js"
+    }
+  },
   "keywords": [],
   "license": "MIT",
   "peerDependencies": {
+    "postcss": "8.x.x",
+    "postcss-flexbugs-fixes": "latest",
     "postcss-jit-props": "^1.0.14",
     "postcss-preset-env": "latest",
-    "postcss-utopia": "^1.1.0",
-    "postcss-flexbugs-fixes": "latest",
-    "postcss": "8.x.x"
+    "postcss-utopia": "^1.1.0"
   },
   "repository": "uxndigital/postcss-config",
   "publishConfig": {

@@ -3,11 +3,38 @@
   "description": "postcss config for UXN Digital",
   "version": "8.0.0",
   "author": "UXN Digital",
+  "exports": {
+    "./public": {
+      "types": "./dist/public.d.ts",
+      "require": "./dist/public.js",
+      "import": "./dist/public.js"
+    },
+    "./public.js": {
+      "types": "./dist/public.d.ts",
+      "require": "./dist/public.js",
+      "import": "./dist/public.js"
+    },
+    "./internal": {
+      "types": "./dist/internal.d.ts",
+      "require": "./dist/internal.js",
+      "import": "./dist/internal.js"
+    },
+    "./internal.js": {
+      "types": "./dist/internal.d.ts",
+      "require": "./dist/internal.js",
+      "import": "./dist/internal.js"
+    }
+  },
+  "main": "./dist/public.js",
+  "types": "./dist/public.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "postcss-load-config": "^3.0.1"
   },
   "devDependencies": {
-    "@types/postcss-load-config": "^3.0.1",
     "postcss": "8.X.X",
     "postcss-flexbugs-fixes": "latest",
     "postcss-jit-props": "^1.0.14",
@@ -15,16 +42,9 @@
     "postcss-utopia": "^1.1.0",
     "typescript": "^5.8.3"
   },
-  "exports": {
-    ".": {
-      "types": "./public.d.ts",
-      "default": "./public.js"
-    },
-    "./internal": {
-      "types": "./internal.d.ts",
-      "default": "./internal.js"
-    }
-  },
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "license": "MIT",
   "peerDependencies": {

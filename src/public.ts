@@ -9,7 +9,9 @@ const config: Config = {
       },
       stage: 3
     },
-    'postcss-jit-props': {},
+    "postcss-jit-props": {
+			files: ["./src/**/*.css"],
+		},
     'postcss-utopia': {}
   }
 };

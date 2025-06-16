@@ -7,10 +7,11 @@ settings:
 importers:
 
   .:
-    devDependencies:
-      '@types/postcss-load-config':
+    dependencies:
+      postcss-load-config:
         specifier: ^3.0.1
-        version: 3.0.1(postcss@8.4.49)
+        version: 3.1.4(postcss@8.4.49)
+    devDependencies:
       postcss:
         specifier: 8.X.X
         version: 8.4.49
@@ -284,10 +285,6 @@ packages:
     peerDependencies:
       postcss: ^8.4
 
-  '@types/postcss-load-config@3.0.1':
-    resolution: {integrity: sha512-W/F7myqejNGhK9mkm1u0rZeS4wzRFTwo0ifUv1XKokYN67oRyTucH6R1ttdL95bXD1UJKD/zq5QNlg3vYgfjDg==}
-    deprecated: This is a stub types definition. postcss-load-config provides its own type definitions, so you do not need this installed.
-
   autoprefixer@10.4.19:
     resolution: {integrity: sha512-BaENR2+zBZ8xXhM4pUaKUxlVdxZ0EZhjvbopwnXmxRUfqDmwSpC2lAi/QXvx7NRdPCo1WKEcEF6mV64si1z4Ew==}
     engines: {node: ^10 || ^12 || >=14}
@@ -348,9 +345,9 @@ packages:
   globrex@0.1.2:
     resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
 
-  lilconfig@3.1.3:
-    resolution: {integrity: sha512-/vlFKAoH5Cgt3Ie+JLhRbwOsCQePABiU3tJ1egGvyQ+33R/vcwM2Zl2QR/LzjsBeItPt3oSVXapn+m4nQDvpzw==}
-    engines: {node: '>=14'}
+  lilconfig@2.1.0:
+    resolution: {integrity: sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==}
+    engines: {node: '>=10'}
 
   nanoid@3.3.7:
     resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
@@ -473,22 +470,16 @@ packages:
     peerDependencies:
       postcss: ^8.4
 
-  postcss-load-config@6.0.1:
-    resolution: {integrity: sha512-oPtTM4oerL+UXmx+93ytZVN82RrlY/wPUV8IeDxFrzIjXOLF1pN+EmKPLbubvKHT2HC20xXsCAH2Z+CKV6Oz/g==}
-    engines: {node: '>= 18'}
+  postcss-load-config@3.1.4:
+    resolution: {integrity: sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg==}
+    engines: {node: '>= 10'}
     peerDependencies:
-      jiti: '>=1.21.0'
       postcss: '>=8.0.9'
-      tsx: ^4.8.1
-      yaml: ^2.4.2
+      ts-node: '>=9.0.0'
     peerDependenciesMeta:
-      jiti:
-        optional: true
       postcss:
         optional: true
-      tsx:
-        optional: true
-      yaml:
+      ts-node:
         optional: true
 
   postcss-logical@8.0.0:
@@ -588,6 +579,10 @@ packages:
 
   utopia-core@1.6.0:
     resolution: {integrity: sha512-1t74XWRugoMxwbPufCBlBRBfp4ebwXh9dLRoEEywAroO3prOQUyGykX4G4o5kHyX5PbfB3Zly1AjP2epeq6ycA==}
+
+  yaml@1.10.2:
+    resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
+    engines: {node: '>= 6'}
 
 snapshots:
 
@@ -843,15 +838,6 @@ snapshots:
     dependencies:
       postcss: 8.4.49
 
-  '@types/postcss-load-config@3.0.1(postcss@8.4.49)':
-    dependencies:
-      postcss-load-config: 6.0.1(postcss@8.4.49)
-    transitivePeerDependencies:
-      - jiti
-      - postcss
-      - tsx
-      - yaml
-
   autoprefixer@10.4.19(postcss@8.4.49):
     dependencies:
       browserslist: 4.24.2
@@ -903,7 +889,7 @@ snapshots:
 
   globrex@0.1.2: {}
 
-  lilconfig@3.1.3: {}
+  lilconfig@2.1.0: {}
 
   nanoid@3.3.7: {}
 
@@ -1023,9 +1009,10 @@ snapshots:
       '@csstools/utilities': 2.0.0(postcss@8.4.49)
       postcss: 8.4.49
 
-  postcss-load-config@6.0.1(postcss@8.4.49):
+  postcss-load-config@3.1.4(postcss@8.4.49):
     dependencies:
-      lilconfig: 3.1.3
+      lilconfig: 2.1.0
+      yaml: 1.10.2
     optionalDependencies:
       postcss: 8.4.49
 
@@ -1177,3 +1164,5 @@ snapshots:
   util-deprecate@1.0.2: {}
 
   utopia-core@1.6.0: {}
+
+  yaml@1.10.2: {}

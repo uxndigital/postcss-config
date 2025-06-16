@@ -1,7 +1,7 @@
 {
   "name": "@uxndigital/postcss-config",
   "description": "postcss config for UXN Digital",
-  "version": "8.0.0",
+  "version": "8.0.1",
   "author": "UXN Digital",
   "exports": {
     "./public": {
